@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Quick Luxury Ride</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { font-family: "Plus Jakarta Sans", system-ui, sans-serif; }
+    .hero-bg { background-image: linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1900&q=80'); background-size: cover; background-position: center; }
+    .rounded, .rounded-sm, .rounded-md, .rounded-lg, .rounded-xl, .rounded-2xl, .rounded-3xl, .rounded-full { border-radius: 0 !important; }
+  </style>
+</head>
+<body class="bg-white text-slate-900">
+<header class="bg-[#f9f3ec] border-b border-slate-200 relative z-30">
+		<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div class="flex items-center justify-between py-3">
+				<a href="#top" class="flex items-center gap-3">
+					<img src="https://quickluxuryride.com/wp-content/uploads/2024/03/logo.png" alt="Quick Luxury Ride logo" class="h-10 w-auto">
+				</a>
+				<nav class="hidden lg:flex items-center gap-8 text-[13px] font-semibold uppercase tracking-wide text-slate-900">
+					<a href="services.html" class="hover:text-[#e65a0a]">Services</a>
+					<a href="services.html#airports" class="hover:text-[#e65a0a]">Airports</a>
+					<a href="fleet.html" class="hover:text-[#e65a0a]">Fleet</a>
+					<a href="business.html" class="hover:text-[#e65a0a]">Business Travel</a>
+					<a href="about.html" class="hover:text-[#e65a0a]">About</a>
+					<a href="blog.html" class="hover:text-[#e65a0a]">Blog</a>
+					<a href="contact.html" class="hover:text-[#e65a0a]">Contact</a>
+				</nav>
+				<div class="hidden lg:flex items-center gap-6 text-[13px] font-semibold uppercase tracking-wide text-slate-900">
+					<div class="relative" id="bookNav">
+						<button id="bookToggle" class="flex items-center gap-1 hover:text-[#e65a0a]">Book Now
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-3.5 h-3.5 text-slate-500">
+								<path d="M12 15.5 7.5 11h9L12 15.5Z"/>
+							</svg>
+						</button>
+						<div id="bookMenu" class="absolute left-0 mt-2 w-48 bg-white text-slate-900 border border-slate-200 shadow-lg hidden z-40">
+							<a href="#" class="block px-4 py-2 text-xs uppercase tracking-wide hover:bg-slate-50">Ground Transportation</a>
+							<a href="#" class="block px-4 py-2 text-xs uppercase tracking-wide hover:bg-slate-50">Private Jet</a>
+						</div>
+					</div>
+					<div class="flex items-center gap-2 pl-5 border-l border-slate-300">
+						<a href="#signin" class="flex items-center gap-2 hover:text-[#e65a0a]">Sign In
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-3.5 h-3.5 text-slate-500">
+								<path d="M9.47 5.47a.75.75 0 0 1 1.06 0l6 6a.75.75 0 0 1 0 1.06l-6 6a.75.75 0 1 1-1.06-1.06L14.94 12 9.47 6.53a.75.75 0 0 1 0-1.06Z"/>
+							</svg>
+						</a>
+					</div>
+				</div>
+				<button id="mobileToggle" class="lg:hidden p-2 rounded-md border border-slate-200 text-slate-800" aria-label="Open navigation">
+					<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16" />
+					</svg>
+				</button>
+			</div>
+			<div id="mobileMenu" class="lg:hidden origin-top hidden flex-col gap-4 pb-4 text-sm font-semibold uppercase tracking-wide">
+				<a href="services.html" class="py-2 border-b border-slate-200">Services</a>
+				<a href="services.html#airports" class="py-2 border-b border-slate-200">Airports</a>
+				<a href="fleet.html" class="py-2 border-b border-slate-200">Fleet</a>
+				<a href="business.html" class="py-2 border-b border-slate-200">Business Travel</a>
+				<a href="about.html" class="py-2 border-b border-slate-200">About</a>
+				<a href="blog.html" class="py-2 border-b border-slate-200">Blog</a>
+				<a href="contact.html" class="py-2 border-b border-slate-200">Contact</a>
+				<div class="border-b border-slate-200 pb-2">
+					<p class="text-slate-500 text-xs mb-1">Book Now</p>
+					<div class="pl-2 space-y-2">
+						<a href="#" class="block text-slate-800">Ground Transportation</a>
+						<a href="#" class="block text-slate-800">Private Jet</a>
+					</div>
+				</div>
+				<div class="flex items-center justify-between pt-2">
+					<a href="#signin" class="flex items-center gap-2 text-slate-800">Sign In
+						<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-3.5 h-3.5 text-slate-500">
+							<path d="M9.47 5.47a.75.75 0 0 1 1.06 0l6 6a.75.75 0 0 1 0 1.06l-6 6a.75.75 0 1 1-1.06-1.06L14.94 12 9.47 6.53a.75.75 0 0 1 0-1.06Z"/>
+						</svg>
+					</a>
+				</div>
+			</div>
+		</div>
+	</header>
+
+  <main class="bg-[#0b1b3a]">
+    <section class="relative py-14 lg:py-16">
+      <div class="absolute inset-0 bg-gradient-to-br from-[#0b1b3a] via-[#0e2048] to-[#0b1b3a]"></div>
+      <div class="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-3 gap-8">
+        <div class="lg:col-span-2 bg-[#fff3e1] text-slate-900 border border-[#f5d8ad] shadow-2xl p-7 sm:p-8 lg:p-10">
+          <p class="text-xs uppercase tracking-[0.25em] text-[#F6B530]">Contact Us</p>
+          <h1 class="text-3xl sm:text-4xl font-semibold leading-tight mt-2">How can we help you today?</h1>
+          <p class="text-sm sm:text-base text-slate-700 mt-2">Please fill out the form and a member of our team will contact you.</p>
+
+          <div class="mt-6 overflow-x-auto">
+            <div class="inline-flex bg-white border border-slate-200 shadow-sm divide-x divide-slate-200 text-[11px] sm:text-[12px] font-semibold uppercase tracking-wide">
+              <a href="#" class="px-4 py-3 hover:text-[#e65a0a]">Corporate Program</a>
+              <a href="#" class="px-4 py-3 hover:text-[#e65a0a]">Travel Agent Program</a>
+              <a href="#" class="px-4 py-3 hover:text-[#e65a0a]">Supply Partners</a>
+              <span class="px-4 py-3 text-[#e65a0a]">Contact Us</span>
+            </div>
+          </div>
+
+          <form class="mt-8 space-y-4">
+            <div class="grid sm:grid-cols-2 gap-3">
+              <label class="space-y-2 text-sm font-semibold text-[#F6B530]">Name
+                <input type="text" class="block w-full border border-slate-300 bg-white px-3 py-2 focus:outline-none" placeholder="Name*">
+              </label>
+              <label class="space-y-2 text-sm font-semibold text-[#F6B530]">Email
+                <input type="email" class="block w-full border border-slate-300 bg-white px-3 py-2 focus:outline-none" placeholder="Email*">
+              </label>
+            </div>
+            <div class="grid sm:grid-cols-2 gap-3">
+              <label class="space-y-2 text-sm font-semibold text-[#F6B530]">Phone
+                <input type="text" class="block w-full border border-slate-300 bg-white px-3 py-2 focus:outline-none" placeholder="(000) 000-0000">
+              </label>
+              <label class="space-y-2 text-sm font-semibold text-[#F6B530]">Company
+                <input type="text" class="block w-full border border-slate-300 bg-white px-3 py-2 focus:outline-none" placeholder="Company">
+              </label>
+            </div>
+
+            <div class="space-y-3">
+              <p class="text-sm font-semibold text-[#F6B530] uppercase tracking-wide">Select what you need</p>
+              <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-3">
+                <label class="border border-slate-300 bg-white px-4 py-4 flex items-center gap-3 text-sm font-semibold text-slate-800">
+                  <input type="radio" name="contactType" class="accent-[#e65a0a]" checked>
+                  <span>Help with ride</span>
+                </label>
+                <label class="border border-slate-300 bg-white px-4 py-4 flex items-center gap-3 text-sm font-semibold text-slate-800">
+                  <input type="radio" name="contactType" class="accent-[#e65a0a]">
+                  <span>Driver partner</span>
+                </label>
+                <label class="border border-slate-300 bg-white px-4 py-4 flex items-center gap-3 text-sm font-semibold text-slate-800">
+                  <input type="radio" name="contactType" class="accent-[#e65a0a]">
+                  <span>Corporate</span>
+                </label>
+                <label class="border border-slate-300 bg-white px-4 py-4 flex items-center gap-3 text-sm font-semibold text-slate-800">
+                  <input type="radio" name="contactType" class="accent-[#e65a0a]">
+                  <span>Travel agent</span>
+                </label>
+              </div>
+            </div>
+
+            <label class="space-y-2 text-sm font-semibold text-[#F6B530]">Message
+              <textarea rows="4" class="block w-full border border-slate-300 bg-white px-3 py-2 focus:outline-none" placeholder="Message*"></textarea>
+            </label>
+
+            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 pt-2">
+              <div class="flex items-center gap-3 border border-slate-300 bg-white px-4 py-3 shadow-inner w-full sm:w-auto">
+                <input type="checkbox" class="accent-[#e65a0a] h-4 w-4">
+                <span class="text-sm text-slate-700">I'm not a robot</span>
+                <div class="ml-auto h-10 w-24 border border-slate-200 bg-slate-50 flex items-center justify-center text-[10px] text-slate-500">reCAPTCHA</div>
+              </div>
+              <button type="button" class="inline-flex items-center justify-center bg-[#f85b0f] text-white font-semibold px-6 py-3 shadow-lg hover:shadow-xl transition w-full sm:w-auto">Submit Request</button>
+            </div>
+          </form>
+        </div>
+
+        <div class="space-y-5">
+          <div class="bg-white border border-slate-200/70 shadow-2xl rounded-xl overflow-hidden">
+            <div class="h-60">
+              <iframe title="Quick Luxury Ride location" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24159.18610613929!2d-73.9920!3d40.7527!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDQ1JzA5LjciTiA3M8KwNTknMzYuMiJX!5e0!3m2!1sen!2sus!4v1700000000000" class="w-full h-full" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="p-5 space-y-3 text-sm text-slate-800">
+              <div class="flex items-center gap-3">
+                <span class="font-semibold">Email</span>
+                <a href="mailto:support@quickluxuryride.com" class="text-[#e65a0a]">support@quickluxuryride.com</a>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="font-semibold">Phone</span>
+                <a href="tel:8334385899" class="text-[#e65a0a]">833-438-5899</a>
+              </div>
+              <p class="text-slate-600">24/7 desk for airport arrivals, corporate support, and concierge requests.</p>
+            </div>
+          </div>
+
+          <div class="bg-[#0b1b3a] text-white border border-[#F6B530]/30 rounded-xl p-5 space-y-4 shadow-xl">
+            <p class="text-xs uppercase tracking-[0.25em] text-[#F6B530]">Social</p>
+            <p class="text-lg font-semibold">Follow us on social media</p>
+            <div class="grid grid-cols-2 gap-3 text-sm">
+              <a href="#" class="flex items-center justify-between bg-white text-slate-900 px-4 py-2 font-semibold border border-slate-200">Instagram <span class="text-slate-400">➝</span></a>
+              <a href="#" class="flex items-center justify-between bg-white text-slate-900 px-4 py-2 font-semibold border border-slate-200">Facebook <span class="text-slate-400">➝</span></a>
+              <a href="#" class="flex items-center justify-between bg-white text-slate-900 px-4 py-2 font-semibold border border-slate-200">LinkedIn <span class="text-slate-400">➝</span></a>
+              <a href="#" class="flex items-center justify-between bg-white text-slate-900 px-4 py-2 font-semibold border border-slate-200">YouTube <span class="text-slate-400">➝</span></a>
+            </div>
+          </div>
+
+          <div class="bg-white border border-slate-200 rounded-xl p-5 shadow-xl space-y-3">
+            <p class="text-xs uppercase tracking-[0.25em] text-[#F6B530]">Mobile</p>
+            <p class="text-lg font-semibold text-slate-900">Download the mobile app</p>
+            <div class="flex flex-wrap gap-3">
+              <a href="#" class="inline-block"><img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Available_on_the_App_Store_%28black%29.png" alt="App Store" class="h-12"></a>
+              <a href="#" class="inline-block"><img src="https://upload.wikimedia.org/wikipedia/commons/c/cd/Get_it_on_Google_play.svg" alt="Google Play" class="h-12"></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-slate-950 text-slate-100 py-14">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-4 gap-10">
+      <div class="space-y-3">
+        <img src="https://quickluxuryride.com/wp-content/uploads/2024/03/logo.png" alt="Quick Luxury Ride logo" class="h-10 w-auto">
+        <p class="text-sm text-slate-300">Based in New York, serving NYC and surrounding areas with premium black car service.</p>
+      </div>
+      <div>
+        <h4 class="font-semibold mb-3">Company</h4>
+        <ul class="space-y-2 text-sm text-slate-300">
+          <li><a href="about.html" class="hover:text-white">About</a></li>
+          <li><a href="contact.html" class="hover:text-white">Contact</a></li>
+          <li><a href="#" class="hover:text-white">Terms</a></li>
+          <li><a href="#" class="hover:text-white">Privacy</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-semibold mb-3">Services</h4>
+        <ul class="space-y-2 text-sm text-slate-300">
+          <li><a href="services.html#airport" class="hover:text-white">Airport Transfers</a></li>
+          <li><a href="services.html#hourly" class="hover:text-white">Hourly</a></li>
+          <li><a href="services.html#city" class="hover:text-white">City-to-City</a></li>
+          <li><a href="business.html" class="hover:text-white">Corporate</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-semibold mb-3">Support</h4>
+        <ul class="space-y-2 text-sm text-slate-300">
+          <li><a href="#" class="hover:text-white">FAQ</a></li>
+          <li><a href="tel:0000000000" class="hover:text-white">(000) 000-0000</a></li>
+          <li><a href="mailto:support@quickluxuryride.com" class="hover:text-white">support@quickluxuryride.com</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="mt-10 text-center text-sm text-slate-500">© <span id="year"></span> Quick Luxury Ride. All rights reserved.</div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const mobileToggle = document.getElementById('mobileToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    mobileToggle.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+
+    // Keep Book dropdown visible while hovering between trigger and menu
+    const bookNav = document.getElementById('bookNav');
+    const bookMenu = document.getElementById('bookMenu');
+    const bookToggle = document.getElementById('bookToggle');
+    if (bookNav && bookMenu && bookToggle) {
+      let bookHideTimeout;
+      const showBookMenu = () => { clearTimeout(bookHideTimeout); bookMenu.classList.remove('hidden'); };
+      const hideBookMenuDelayed = () => { bookHideTimeout = setTimeout(() => bookMenu.classList.add('hidden'), 200); };
+      [bookNav, bookMenu, bookToggle].forEach(el => {
+        el.addEventListener('mouseenter', showBookMenu);
+        el.addEventListener('mouseleave', hideBookMenuDelayed);
+      });
+    }
+  </script>
+</body>
+</html>
