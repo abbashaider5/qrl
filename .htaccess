@@ -1,0 +1,22 @@
+# Enable URL rewriting to allow extension-less PHP URLs
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # Ensure the base is the current directory
+  RewriteBase /qlr/
+
+  # Skip existing files and directories
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # Blog post SEO-friendly URLs: /blog/slug-name
+  RewriteRule ^blog/([a-zA-Z0-9-]+)$ blog-post.php [L,QSA]
+
+  # If the request doesn't contain a dot, try appending .php
+  RewriteCond %{REQUEST_URI} !\.
+  RewriteRule ^(.+)$ $1.php [L,QSA]
+</IfModule>
+
+# Fallback: set default directory index
+DirectoryIndex index.php
